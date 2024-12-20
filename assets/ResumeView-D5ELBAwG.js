@@ -1,0 +1,1 @@
+import{P as e}from"./PageComponent-hzmhJ5zX.js";import{d as o,c as t,o as a}from"./index-BNzvZZBy.js";const p=o({__name:"ResumeView",setup(n){return(r,s)=>(a(),t(e,{title:"Resume"}))}});export{p as default};
