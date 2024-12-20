@@ -1,0 +1,1 @@
+import{P as o}from"./PageComponent-CWfXTOcD.js";import{d as e,c as t,o as r}from"./index-B9OTjYvQ.js";const i=e({__name:"PortfolioView",setup(a){return(n,c)=>(r(),t(o,{title:"Portfolio"}))}});export{i as default};
