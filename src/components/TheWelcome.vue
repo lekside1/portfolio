@@ -10,6 +10,6 @@ import HelloWorld from './HelloWorld.vue'
 
 <template>
   <h1 class="title">{{ title }}</h1>
-  <HelloWorld msg="Welcome to my portfolio." />
+  <HelloWorld msg="Welcome to my portfolio. Website in progress." />
   <SocialLinks />
 </template>
