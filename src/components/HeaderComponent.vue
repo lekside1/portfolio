@@ -26,7 +26,6 @@ onMounted(() => {
 
 <template>
   <header>
-    <!-- TODO: use svg icons -->
     <div class="header-top">
       <div class="burger-button" @click="toggleDrawer">&#9776;</div>
 
@@ -39,10 +38,14 @@ onMounted(() => {
 
     <!-- Desktop nav -->
     <nav class="desktop-nav">
-      <RouterLink to="/"><IconsComponent icon="home" /></RouterLink>
-      <RouterLink to="/resume"><IconsComponent icon="resume" /></RouterLink>
-      <RouterLink to="/about"><IconsComponent icon="about" /></RouterLink>
-      <RouterLink to="/contact"><IconsComponent icon="contact" /></RouterLink>
+      <RouterLink class="nav-item" to="/"><IconsComponent icon="home" />Home</RouterLink>
+      <RouterLink class="nav-item" to="/resume">
+        <IconsComponent icon="resume" />Resume
+      </RouterLink>
+      <RouterLink class="nav-item" to="/about"><IconsComponent icon="about" />About</RouterLink>
+      <RouterLink class="nav-item" to="/contact">
+        <IconsComponent icon="contact" />Contact
+      </RouterLink>
     </nav>
 
     <!-- Mobile nav drawer -->
@@ -52,10 +55,18 @@ onMounted(() => {
       </button>
 
       <nav class="drawer-nav">
-        <RouterLink to="/" @click="toggleDrawer">Home</RouterLink>
-        <RouterLink to="/resume" @click="toggleDrawer">Resume</RouterLink>
-        <RouterLink to="/about" @click="toggleDrawer">About</RouterLink>
-        <RouterLink to="/contact" @click="toggleDrawer">Contact</RouterLink>
+        <RouterLink class="nav-item" to="/" @click="toggleDrawer">
+          <IconsComponent icon="home" />Home
+        </RouterLink>
+        <RouterLink class="nav-item" to="/resume" @click="toggleDrawer">
+          <IconsComponent icon="resume" />Resume
+        </RouterLink>
+        <RouterLink class="nav-item" to="/about" @click="toggleDrawer">
+          <IconsComponent icon="about" />About
+        </RouterLink>
+        <RouterLink class="nav-item" to="/contact" @click="toggleDrawer">
+          <IconsComponent icon="contact" />Contact
+        </RouterLink>
       </nav>
     </div>
   </header>
@@ -83,6 +94,12 @@ header .desktop-nav {
   display: none;
 }
 
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 nav {
   display: flex;
   text-align: center;
@@ -98,11 +115,6 @@ nav a.router-link-exact-active {
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
 }
 
 nav a:first-of-type {
@@ -159,7 +171,7 @@ nav a:first-of-type {
     display: flex;
     flex-direction: column;
     place-content: center;
-    gap: calc(var(--section-gap) / 3);
+    gap: calc(var(--section-gap) / 4);
   }
 
   nav {
@@ -175,6 +187,7 @@ nav a:first-of-type {
   }
 
   .close-button {
+    display: block;
     position: absolute;
     top: 1rem;
     right: 1rem;
