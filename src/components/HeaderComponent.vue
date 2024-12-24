@@ -1,31 +1,58 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { ref, onMounted } from 'vue'
 
-import { ref } from 'vue'
+import ThemeSwitcher from './ThemeSwitcher.vue'
+import IconsComponent from './IconsComponent.vue'
 
 const isDrawerOpen = ref(false)
 const toggleDrawer = () => {
   isDrawerOpen.value = !isDrawerOpen.value
+  if (isDrawerOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
 }
+
+onMounted(() => {
+  const headerTop = document.querySelector('.header-top') as HTMLElement
+  if (headerTop) {
+    const headerTopHeight = headerTop.offsetHeight
+    document.documentElement.style.setProperty('--header-top-height', `${headerTopHeight}px`)
+  }
+})
 </script>
 
 <template>
   <header>
+    <!-- TODO: use svg icons -->
+    <div class="header-top">
+      <div class="burger-button" @click="toggleDrawer">&#9776;</div>
+
+      <RouterLink to="/" class="logo">
+        <img alt="Vue logo" class="logo-img" src="@/assets/logo.svg" width="50" height="50" />
+      </RouterLink>
+
+      <ThemeSwitcher :showLabel="false" />
+    </div>
+
+    <!-- Desktop nav -->
     <nav class="desktop-nav">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/portfolio">Portfolio</RouterLink>
-      <RouterLink to="/resume">Resume</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
+      <RouterLink to="/"><IconsComponent icon="home" /></RouterLink>
+      <RouterLink to="/resume"><IconsComponent icon="resume" /></RouterLink>
+      <RouterLink to="/about"><IconsComponent icon="about" /></RouterLink>
+      <RouterLink to="/contact"><IconsComponent icon="contact" /></RouterLink>
     </nav>
 
-    <!-- TODO: use svg icons -->
-    <div class="burger-button" @click="toggleDrawer">&#9776;</div>
+    <!-- Mobile nav drawer -->
     <div :class="{ drawer: true, 'drawer-open': isDrawerOpen }">
-      <button class="close-button" @click="toggleDrawer">X</button>
+      <button class="close-button" @click="toggleDrawer">
+        <IconsComponent icon="close" />
+      </button>
+
       <nav class="drawer-nav">
         <RouterLink to="/" @click="toggleDrawer">Home</RouterLink>
-        <RouterLink to="/portfolio" @click="toggleDrawer">Portfolio</RouterLink>
         <RouterLink to="/resume" @click="toggleDrawer">Resume</RouterLink>
         <RouterLink to="/about" @click="toggleDrawer">About</RouterLink>
         <RouterLink to="/contact" @click="toggleDrawer">Contact</RouterLink>
@@ -38,7 +65,18 @@ const toggleDrawer = () => {
 header {
   line-height: 1.5;
   max-height: 100vh;
-  width: fit-content;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-background-soft);
+  box-shadow: 0 1px 3px var(--color-border);
 }
 
 header .desktop-nav {
@@ -76,7 +114,10 @@ nav a:first-of-type {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+}
+
+.close-button {
+  display: none;
 }
 
 .drawer {
@@ -106,17 +147,15 @@ nav a:first-of-type {
 
 /* Desktop nav */
 @media (min-width: 1024px) {
-  header {
+  header .desktop-nav {
     position: fixed;
-    top: 0;
+    top: var(--header-top-height);
     left: 0;
     bottom: 0;
     z-index: 9997;
     transition: all 0.5s;
     padding: 2rem;
-  }
-
-  header .desktop-nav {
+    width: fit-content;
     display: flex;
     flex-direction: column;
     place-content: center;
@@ -133,9 +172,6 @@ nav a:first-of-type {
 @media (max-width: 1024px) {
   .burger-button {
     display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .close-button {
@@ -143,7 +179,10 @@ nav a:first-of-type {
     top: 1rem;
     right: 1rem;
     font-size: 2rem;
+    background: none;
+    border: none;
     cursor: pointer;
+    color: var(--color-text);
   }
 }
 </style>

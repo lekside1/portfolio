@@ -1,20 +1,11 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 
-import ThemeSwitcher from './components/ThemeSwitcher.vue'
-import GoToTop from './components/GoToTop.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
 </script>
 
 <template>
-  <RouterLink to="/" class="logo">
-    <img alt="Vue logo" class="logo-img" src="@/assets/logo.svg" width="80" height="80" />
-  </RouterLink>
-
-  <ThemeSwitcher :showLabel="false" />
-  <GoToTop />
-
   <HeaderComponent />
 
   <RouterView />

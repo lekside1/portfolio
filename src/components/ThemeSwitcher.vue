@@ -46,11 +46,7 @@ watch(isDarkMode, (newValue) => {
 
 <style scoped>
 .switcher {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: flex;
-  padding: 1rem;
   place-content: center;
   place-items: center;
   gap: 1rem;

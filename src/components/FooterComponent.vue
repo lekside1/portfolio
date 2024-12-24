@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SocialLinks from './SocialLinks.vue'
+import GoToTop from './GoToTop.vue'
+</script>
 
 <template>
   <footer>
@@ -7,25 +10,13 @@
       <p>– Steve Jobs</p>
     </div>
 
-    <!-- TODO: add icons and links -->
-    <nav class="social-links">
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-        ><span class="fab fa-twitter">X</span></a
-      >
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-        ><span class="fab fa-linkedin">LinkedIn</span></a
-      >
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-        ><span class="fab fa-github">Github</span></a
-      >
-      <a href="https://codepen.io" target="_blank" rel="noopener noreferrer"
-        ><span class="fab fa-codepen">Codepen</span></a
-      >
-    </nav>
+    <SocialLinks />
 
     <div class="copy-right">
       <p>&copy; <b>Adelekan Faruq Aliu 2024</b> - All rights reserved</p>
     </div>
+
+    <GoToTop />
   </footer>
 </template>
 
@@ -34,15 +25,10 @@ footer {
   display: flex;
   place-items: center;
   flex-direction: column;
-  gap: 1rem;
   background-color: var(--color-background-soft);
   padding: 1rem;
   margin-top: auto;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
+  box-shadow: 0 -1px 3px var(--color-border);
 }
 
 /* Desktop */
