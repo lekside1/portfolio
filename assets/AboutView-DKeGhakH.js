@@ -1,0 +1,1 @@
+import{P as e}from"./PageComponent-Ccth7fZ1.js";import{d as o,c as t,o as a}from"./index-Hog8Du-R.js";const m=o({__name:"AboutView",setup(n){return(r,c)=>(a(),t(e,{title:"About"}))}});export{m as default};
