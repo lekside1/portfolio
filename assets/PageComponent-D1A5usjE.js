@@ -1,0 +1,1 @@
+import{d as t,o,a as s,b as a,t as n,r as c,_ as r}from"./index-ChxfXNIw.js";const p={class:"page"},_={class:"title"},i=t({__name:"PageComponent",props:{title:{},content:{}},setup(l){return(e,d)=>(o(),s("section",p,[a("h1",_,n(e.title),1),c(e.$slots,"default",{},void 0)]))}}),f=r(i,[["__scopeId","data-v-4869ed70"]]);export{f as P};
