@@ -64,8 +64,8 @@ a {
 
 svg {
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--svg-width, 1.5rem);
+  height: var(--svg-height, 1.5rem);
   fill: currentColor;
   color: inherit;
 }

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 defineProps<{
   icon?: string
+  width?: string
+  height?: string
 }>()
 
 const getIconComponent = (icon: string) => {
@@ -69,7 +71,10 @@ const getIconComponent = (icon: string) => {
 }
 </script>
 <template>
-  <div v-html="getIconComponent(icon ?? '').template" />
+  <div
+    :style="{ '--svg-width': width, '--svg-height': height }"
+    v-html="getIconComponent(icon ?? '').template"
+  />
 </template>
 
 <style scoped>

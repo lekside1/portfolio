@@ -28,7 +28,7 @@ const toggleDrawer = () => {
   <header>
     <div class="header-top">
       <button class="burger-button" @click="toggleDrawer">
-        <IconsComponent icon="hamburger" />
+        <IconsComponent icon="hamburger" width="2.5rem" height="2.5rem" />
       </button>
 
       <RouterLink to="/" class="logo">
@@ -106,7 +106,7 @@ header {
   .nav-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   nav {
@@ -199,10 +199,18 @@ header {
         }
       }
     }
+
+    .drawer-open {
+      transform: translateX(-100%);
+    }
   }
 
   /* Mobile */
   @media (max-width: 1024px) {
+    nav {
+      font-size: 2rem;
+    }
+
     button {
       color: var(--vt-c-green);
       background: none;
@@ -219,11 +227,6 @@ header {
       position: absolute;
       top: 1rem;
       right: 1rem;
-    }
-
-    .burger-button svg {
-      width: 2rem;
-      height: 2rem;
     }
   }
 

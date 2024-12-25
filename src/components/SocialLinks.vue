@@ -27,9 +27,10 @@ import IconsComponent from './IconsComponent.vue'
 <style scoped>
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem 1.5rem;
   margin: 1rem 0;
 
   /* Desktop */
