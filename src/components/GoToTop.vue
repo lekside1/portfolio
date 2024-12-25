@@ -23,7 +23,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- TODO: use svg icon, update colors -->
   <button v-if="showButton" @click="scrollToTop" class="go-to-top">
     <IconsComponent icon="arrow-up" />
   </button>

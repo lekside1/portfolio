@@ -3,7 +3,6 @@ import IconsComponent from './IconsComponent.vue'
 </script>
 
 <template>
-  <!-- TODO: add icons and links -->
   <div class="social-links">
     <a class="icon" href="https://x.com/lefarside" target="_blank" rel="noopener noreferrer">
       <IconsComponent icon="x" />
