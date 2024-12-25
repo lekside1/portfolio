@@ -1,1 +1,0 @@
-import{P as e}from"./PageComponent-qesVkMW0.js";import{d as o,c as t,o as a}from"./index-Ck8RioZt.js";const m=o({__name:"AboutView",setup(n){return(r,c)=>(a(),t(e,{title:"About"}))}});export{m as default};
