@@ -23,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <button v-if="showButton" @click="scrollToTop" class="go-to-top">
+  <button v-if="showButton" @click="scrollToTop" class="go-to-top" aria-label="Go to top">
     <IconsComponent icon="arrow-up" />
   </button>
 </template>
@@ -43,8 +43,8 @@ onUnmounted(() => {
   transition:
     color 0.2s ease-in-out,
     background-color 0.2s ease-in-out;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: grid;
   place-items: center;
   place-content: center;

@@ -27,13 +27,13 @@ const toggleDrawer = () => {
 <template>
   <header>
     <div class="header-top">
-      <button class="burger-button" @click="toggleDrawer">
-        <IconsComponent icon="hamburger" width="2.5rem" height="2.5rem" />
+      <button class="burger-button" @click="toggleDrawer" aria-label="Open navigation drawer">
+        <IconsComponent icon="hamburger" width="2rem" height="2rem" />
       </button>
 
-      <RouterLink to="/" class="logo">
+      <!-- <RouterLink to="/" class="logo">
         <img alt="Vue logo" class="logo-img" src="@/assets/logo.svg" width="50" height="50" />
-      </RouterLink>
+      </RouterLink> -->
 
       <ThemeSwitcher :showLabel="false" />
     </div>
@@ -52,7 +52,7 @@ const toggleDrawer = () => {
 
     <!-- Mobile nav drawer -->
     <div :class="{ drawer: true, 'drawer-open': isDrawerOpen }">
-      <button class="close-button" @click="toggleDrawer">
+      <button class="close-button" @click="toggleDrawer" aria-label="Close navigation drawer">
         <IconsComponent icon="close" />
       </button>
 
@@ -86,7 +86,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     background-color: var(--color-background-soft);
     box-shadow: 0 1px 3px var(--color-border);
   }
@@ -207,6 +207,10 @@ header {
 
   /* Mobile */
   @media (max-width: 1024px) {
+    .header-top {
+      padding: 0.25rem 0.5rem;
+    }
+
     nav {
       font-size: 2rem;
     }
@@ -220,6 +224,7 @@ header {
 
     .burger-button {
       display: block;
+      padding: 0;
     }
 
     .close-button {

@@ -38,7 +38,12 @@ watch(isDarkMode, (newValue) => {
     }}</span>
 
     <label class="switch">
-      <input type="checkbox" @change="toggleTheme" :checked="isDarkMode" />
+      <input
+        type="checkbox"
+        aria-label="Toggle theme appearance"
+        @change="toggleTheme"
+        :checked="isDarkMode"
+      />
       <span class="slider"></span>
     </label>
   </div>
@@ -46,14 +51,22 @@ watch(isDarkMode, (newValue) => {
 
 <style scoped>
 .switcher {
+  --width-of-switch: 3.5rem;
+  --height-of-switch: 1.6rem;
+  --size-of-icon: 1.2rem;
+  --slider-offset: 0.2rem;
+
   display: flex;
   place-content: center;
   place-items: center;
   gap: 1rem;
-  --width-of-switch: 3.5rem;
-  --height-of-switch: 2rem;
-  --size-of-icon: 1.4rem;
-  --slider-offset: 0.3rem;
+  margin-left: auto;
+
+  @media (hover: hover) {
+    &:hover .slider {
+      border-color: var(--color-border-hover);
+    }
+  }
 }
 
 .switcher-label {
@@ -84,6 +97,7 @@ watch(isDarkMode, (newValue) => {
   background-color: var(--color-border);
   transition: 0.4s;
   border-radius: 30px;
+  border: 1px solid var(--color-border);
 }
 
 .slider:before {

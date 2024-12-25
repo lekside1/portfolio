@@ -9,10 +9,6 @@ section {
   font-weight: normal;
 }
 
-section {
-  padding-top: 0 !important;
-}
-
 #app {
   display: grid;
   min-height: 100vh;
