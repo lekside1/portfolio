@@ -1,0 +1,1 @@
+import{P as t}from"./PageComponent-Drh9VQP9.js";import{d as e,c as o,o as a}from"./index-nlhLWiZe.js";const m=e({__name:"ContactView",setup(n){return(c,r)=>(a(),o(t,{title:"Contact"}))}});export{m as default};
