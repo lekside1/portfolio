@@ -5,13 +5,13 @@ defineProps<{
 </script>
 
 <template>
-  <div class="greetings">
-    <h2 class="green typewriter">{{ msg }}</h2>
+  <div class="typewriter">
+    <h2 class="green typewrite">{{ msg }}</h2>
   </div>
 </template>
 
 <style scoped>
-.greetings {
+.typewriter {
   text-align: center;
   width: fit-content;
   margin: 0 auto;
@@ -38,17 +38,24 @@ defineProps<{
   }
 }
 
-.typewriter {
+.typewrite {
   font-size: 2rem;
   overflow: hidden;
-  border-right: 0.2rem solid var(--color-text);
+  /* border-right: 0.2rem solid var(--color-text); */
   white-space: nowrap;
-  animation:
-    /* typing 4s steps(40, end) 1s infinite alternate, */
-    typing 4s steps(40, end),
-    blinking 1s steps(1, end) infinite;
+  animation: typing 4s steps(40, end) 1s;
+  /* typing 4s steps(40, end) 1s infinite alternate,
+  blinking 1s steps(1, end) infinite; */
 }
 
+.typewrite::after {
+  content: '';
+  margin-left: 5px;
+  border-right: 0.2rem solid var(--color-text);
+  animation: blinking 1s steps(1, end) infinite;
+}
+
+/* Desktop */
 @media (min-width: 1024px) {
 }
 </style>

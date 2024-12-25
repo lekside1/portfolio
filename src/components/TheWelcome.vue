@@ -5,11 +5,27 @@ defineProps<{
 }>()
 
 import SocialLinks from './SocialLinks.vue'
-import HelloWorld from './HelloWorld.vue'
+import TypeWriter from './TypeWriter.vue'
 </script>
 
 <template>
   <h1 class="title">{{ title }}</h1>
-  <HelloWorld msg="Welcome to my portfolio. Website in progress." />
+
+  <div class="welcome">
+    <TypeWriter msg="Welcome to my portfolio." />
+    <TypeWriter msg="Website in progress." />
+  </div>
+
   <SocialLinks />
 </template>
+
+<style scoped>
+.welcome {
+  margin: 2rem auto;
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    margin: 1rem auto;
+  }
+}
+</style>
