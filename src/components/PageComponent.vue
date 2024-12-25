@@ -15,7 +15,7 @@ defineProps<{
 <style scoped>
 @media (min-width: 1024px) {
   .page {
-    color: var(--text-color);
+    color: var(--color-text);
   }
 }
 </style>

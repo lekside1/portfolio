@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
+import IconsComponent from './IconsComponent.vue'
+
 const showButton = ref(false)
 
 const handleScroll = () => {
@@ -22,7 +24,9 @@ onUnmounted(() => {
 
 <template>
   <!-- TODO: use svg icon, update colors -->
-  <button v-if="showButton" @click="scrollToTop" class="go-to-top">Top</button>
+  <button v-if="showButton" @click="scrollToTop" class="go-to-top">
+    <IconsComponent icon="arrow-up" />
+  </button>
 </template>
 
 <style scoped>
@@ -30,22 +34,27 @@ onUnmounted(() => {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 20px;
+  padding: 1rem;
   background-color: var(--vt-c-green);
-  color: var(--color-text);
+  color: var(--color-background-mute);
   border: none;
   border-radius: 50%;
   cursor: pointer;
   z-index: 999;
-  transition: opacity 0.3s;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
   width: 3rem;
   height: 3rem;
   display: grid;
   place-items: center;
   place-content: center;
-}
 
-.go-to-top:hover {
-  background-color: var(--vt-c-green-90);
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-border);
+      color: var(--vt-c-green);
+    }
+  }
 }
 </style>

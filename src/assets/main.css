@@ -15,8 +15,6 @@ section {
 
 #app {
   display: grid;
-  grid-template-rows: fit-content(100%);
-
   min-height: 100vh;
 }
 
@@ -31,6 +29,10 @@ section {
   font-size: 2rem;
   text-align: center;
   margin: 1rem 0;
+  background: -webkit-linear-gradient(315deg, var(--vt-c-green) 25%, var(--vt-c-blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title::before,
@@ -50,14 +52,14 @@ a {
   padding: 3px;
 }
 
-.green {
-  color: var(--vt-c-green);
-}
-
 @media (hover: hover) {
   a:hover {
-    color: hsla(160, 100%, 37%, 0.7);
+    color: var(--vt-c-red);
   }
+}
+
+.green {
+  color: var(--vt-c-green);
 }
 
 svg {
@@ -76,6 +78,11 @@ svg {
     place-content: center;
     padding: 3rem;
     padding-left: 15rem;
+    max-width: 1280px;
+  }
+
+  #app {
+    grid-template-rows: fit-content(100%);
   }
 
   .title {

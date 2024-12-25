@@ -5,7 +5,7 @@ defineProps<{
 
 import { ref, onMounted, watch } from 'vue'
 
-// slider checkbox for light/dark mode
+// check device preference for light or dark mode
 const isDarkMode = ref(false)
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   isDarkMode.value = true

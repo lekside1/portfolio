@@ -30,7 +30,6 @@ i {
   place-content: center;
   width: 32px;
   height: 32px;
-
   color: var(--color-text);
 }
 
@@ -41,10 +40,11 @@ h3 {
   color: var(--color-heading);
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    padding: 1rem 0 1rem calc(var(--section-gap) / 2);
   }
 
   i {
