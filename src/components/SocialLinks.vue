@@ -1,20 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import IconsComponent from './IconsComponent.vue'
+</script>
 
 <template>
   <!-- TODO: add icons and links -->
   <div class="social-links">
-    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-      ><span class="fab fa-twitter">X</span></a
+    <a class="icon" href="https://x.com/lefarside" target="_blank" rel="noopener noreferrer">
+      <IconsComponent icon="x" />
+    </a>
+    <a
+      class="icon"
+      href="https://linkedin.com/in/faruqaliu/"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-      ><span class="fab fa-linkedin">LinkedIn</span></a
-    >
-    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-      ><span class="fab fa-github">Github</span></a
-    >
-    <a href="https://codepen.io" target="_blank" rel="noopener noreferrer"
-      ><span class="fab fa-codepen">Codepen</span></a
-    >
+      <IconsComponent icon="linkedin" />
+    </a>
+    <a class="icon" href="https://github.com/lekside1" target="_blank" rel="noopener noreferrer">
+      <IconsComponent icon="github" />
+    </a>
+    <a class="icon" href="https://codepen.io/lekside1" target="_blank" rel="noopener noreferrer">
+      <IconsComponent icon="codepen" />
+    </a>
   </div>
 </template>
 
@@ -25,20 +32,18 @@
   justify-content: center;
   gap: 1rem;
   margin: 1rem 0;
-}
 
-.fab {
-  display: block;
-  /* width: 25px;
-  height: 25px; */
-  color: var(--color-primary);
-}
+  /* Desktop */
+  @media (min-width: 1024px) {
+    a.icon {
+      color: var(--color-text);
 
-.fab:hover {
-  color: var(--vt-c-green);
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
+      @media (hover: hover) {
+        &:hover {
+          color: var(--vt-c-green);
+        }
+      }
+    }
+  }
 }
 </style>
