@@ -9,10 +9,9 @@ import TypeWriter from './TypeWriter.vue'
 </script>
 
 <template>
-  <h1 class="title">{{ title }}</h1>
-
+  <h1 class="title name">{{ title }}</h1>
   <div class="welcome">
-    <TypeWriter msg="Welcome to my portfolio." />
+    <!-- <TypeWriter msg="Welcome to my portfolio." /> -->
     <TypeWriter msg="Website in progress." />
   </div>
 
@@ -20,6 +19,10 @@ import TypeWriter from './TypeWriter.vue'
 </template>
 
 <style scoped>
+.name {
+  font-size: 4rem;
+}
+
 .welcome {
   margin: 2rem auto;
 
