@@ -1,7 +1,90 @@
 <script setup lang="ts">
-import PageComponent from '@/components/PageComponent.vue'
+import TitleComponent from '@/components/TitleComponent.vue'
+import PageContent from '@/components/PageContent.vue'
+// import IconsComponent from '@/components/IconsComponent.vue'
 </script>
 
 <template>
-  <PageComponent title="About" />
+  <PageContent class="about">
+    <TitleComponent title="About" />
+
+    <!-- TODO: About page content -->
+    <div class="about-inner">
+      <div class="image">
+        <img alt="Vue logo" class="logo-img" src="@/assets/logo.svg" width="400" height="500" />
+      </div>
+
+      <div class="about-content">
+        <ul>
+          <li><span class="bold">Name:</span> Adelekan Faruq Aliu</li>
+          <li><span class="bold">City:</span> Montreal, Quebec.</li>
+          <li><span class="bold">Languages:</span> English, French, Yoruba</li>
+          <li>
+            <span class="bold">Interests:</span> Science and Technology, Video Games, Fine Arts,
+            Music, Languages, Traveling
+          </li>
+          <li><span class="bold">Sports:</span> Football/Soccer, Basketball, Dodgeball</li>
+        </ul>
+
+        <div class="information">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+  </PageContent>
 </template>
+
+<style scoped>
+.about {
+  .about-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .image {
+    display: block;
+    padding: 1rem;
+  }
+
+  .about-content {
+    padding: 1rem;
+
+    /* ul {
+      list-style: none;
+      padding: 0;
+    } */
+
+    li {
+      /* position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem; */
+      margin-bottom: 1rem;
+    }
+
+    /* li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--vt-c-blue);
+      font-weight: 900;
+    } */
+  }
+
+  .information {
+    p {
+      margin: 1rem 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .about-inner {
+      flex-direction: row;
+    }
+  }
+}
+</style>
