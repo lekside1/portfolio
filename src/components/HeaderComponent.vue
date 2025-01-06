@@ -35,20 +35,20 @@ const toggleDrawer = () => {
         <img alt="Vue logo" class="logo-img" src="@/assets/logo.svg" width="50" height="50" />
       </RouterLink> -->
 
+      <!-- Desktop nav -->
+      <nav class="desktop-nav">
+        <RouterLink class="nav-item" to="/"><IconsComponent icon="home" />Home</RouterLink>
+        <RouterLink class="nav-item" to="/resume">
+          <IconsComponent icon="resume" />Resume
+        </RouterLink>
+        <RouterLink class="nav-item" to="/about"><IconsComponent icon="about" />About</RouterLink>
+        <RouterLink class="nav-item" to="/contact">
+          <IconsComponent icon="contact" />Contact
+        </RouterLink>
+      </nav>
+
       <ThemeSwitcher :showLabel="false" />
     </div>
-
-    <!-- Desktop nav -->
-    <nav class="desktop-nav">
-      <RouterLink class="nav-item" to="/"><IconsComponent icon="home" />Home</RouterLink>
-      <RouterLink class="nav-item" to="/resume">
-        <IconsComponent icon="resume" />Resume
-      </RouterLink>
-      <RouterLink class="nav-item" to="/about"><IconsComponent icon="about" />About</RouterLink>
-      <RouterLink class="nav-item" to="/contact">
-        <IconsComponent icon="contact" />Contact
-      </RouterLink>
-    </nav>
 
     <!-- Mobile nav drawer -->
     <div :class="{ drawer: true, 'drawer-open': isDrawerOpen }">
@@ -76,19 +76,21 @@ const toggleDrawer = () => {
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
   position: sticky;
   top: 0;
   z-index: 9999;
+  line-height: 1.5;
+  max-height: 100vh;
+  background-color: var(--color-background-soft);
+  box-shadow: 0 1px 3px var(--color-border);
 
   .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
-    background-color: var(--color-background-soft);
-    box-shadow: 0 1px 3px var(--color-border);
+    margin: 0 auto;
+    max-width: var(--xlarge-container);
   }
 
   .logo {
@@ -159,18 +161,14 @@ header {
 
   /* Desktop */
   @media (min-width: 1024px) {
+    .header-top {
+      padding: 1rem 0;
+    }
+
     .desktop-nav {
-      position: fixed;
-      /* top: var(--header-top-height); */
-      top: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 9997;
       transition: all 0.5s;
-      padding: 2rem;
       width: fit-content;
       display: flex;
-      flex-direction: column;
       place-content: center;
       gap: calc(var(--section-gap) / 4);
     }
@@ -180,11 +178,6 @@ header {
       padding: 1rem 2rem;
       position: relative;
       z-index: 9999;
-    }
-
-    nav {
-      text-align: left;
-      padding: 1rem 0;
     }
 
     .nav-item {
@@ -207,10 +200,6 @@ header {
 
   /* Mobile */
   @media (max-width: 1024px) {
-    .header-top {
-      padding: 0.25rem 0.5rem;
-    }
-
     nav {
       font-size: 2rem;
     }
