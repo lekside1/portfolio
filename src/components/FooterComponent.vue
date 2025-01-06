@@ -13,7 +13,7 @@ import GoToTop from './GoToTop.vue'
     <SocialLinks />
 
     <div class="copy-right">
-      <p>&copy; <b>Adelekan Faruq Aliu 2024</b> - All rights reserved</p>
+      <p>&copy; <b class="bold">Adelekan Faruq Aliu</b> 2024</p>
     </div>
 
     <GoToTop />
@@ -22,6 +22,9 @@ import GoToTop from './GoToTop.vue'
 
 <style scoped>
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
   place-items: center;
   flex-direction: column;
