@@ -45,6 +45,11 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
+  --small-container: 320px;
+  --medium-container: 768px;
+  --large-container: 1024px;
+  --xlarge-container: 1280px;
+
   --section-gap: 160px;
 }
 
