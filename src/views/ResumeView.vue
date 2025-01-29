@@ -5,6 +5,8 @@ import TitleComponent from '@/components/TitleComponent.vue'
 import PageContent from '@/components/PageContent.vue'
 import IconsComponent from '@/components/IconsComponent.vue'
 
+import resume from '@/assets/afa-resume-2025.pdf'
+
 import WelcomeItem from '@/components/WelcomeItem.vue'
 import DocumentationIcon from '@/components/icons/IconDocumentation.vue'
 import ToolingIcon from '@/components/icons/IconTooling.vue'
@@ -48,8 +50,8 @@ const selectTab = (index: number) => {
 
         <!-- Download resume button -->
         <a
-          href="src/assets/afa-resume.pdf"
-          download="AFA-Resume"
+          :href="resume"
+          download="AFA-Resume-test"
           class="button button-tertiary button-download"
           aria-label="Download resume pdf"
         >
