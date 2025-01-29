@@ -51,7 +51,7 @@ const selectTab = (index: number) => {
         <!-- Download resume button -->
         <a
           :href="resume"
-          download="AFA-Resume-test"
+          download="AFA-Resume"
           class="button button-tertiary button-download"
           aria-label="Download resume pdf"
         >
