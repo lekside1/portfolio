@@ -45,6 +45,9 @@ const toggleDrawer = () => {
         <RouterLink class="nav-item" to="/contact">
           <IconsComponent icon="contact" />Contact
         </RouterLink>
+        <RouterLink class="nav-item" to="/portfolio">
+          <IconsComponent icon="portfolio" />Portfolio
+        </RouterLink>
       </nav>
 
       <ThemeSwitcher :showLabel="false" />
@@ -68,6 +71,9 @@ const toggleDrawer = () => {
         </RouterLink>
         <RouterLink class="nav-item" to="/contact" @click="toggleDrawer">
           <IconsComponent icon="contact" />Contact
+        </RouterLink>
+        <RouterLink class="nav-item" to="/portfolio" @click="toggleDrawer">
+          <IconsComponent icon="portfolio" />Portfolio
         </RouterLink>
       </nav>
     </div>
@@ -199,7 +205,7 @@ header {
   }
 
   /* Mobile */
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     nav {
       font-size: 2rem;
     }
