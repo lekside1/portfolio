@@ -4,9 +4,9 @@ import IconsComponent from './IconsComponent.vue'
 
 <template>
   <div class="social-links">
-    <a class="icon" href="https://x.com/lefarside" target="_blank" rel="noopener noreferrer">
+    <!-- <a class="icon" href="https://x.com/lefarside" target="_blank" rel="noopener noreferrer">
       <IconsComponent icon="x" />
-    </a>
+    </a> -->
     <a
       class="icon"
       href="https://linkedin.com/in/faruqaliu/"
