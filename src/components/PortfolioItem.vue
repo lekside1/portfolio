@@ -44,6 +44,13 @@ defineProps<{
 
   /* Desktop */
   @media (min-width: 1024px) {
+    transition: transform 0.3s ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 }
 </style>

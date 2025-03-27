@@ -5,7 +5,7 @@ import TitleComponent from '@/components/TitleComponent.vue'
 import PageContent from '@/components/PageContent.vue'
 import IconsComponent from '@/components/IconsComponent.vue'
 
-import resume from '@/assets/afa-resume-2025.pdf'
+import resume from '@/assets/afa-resume.pdf'
 
 import WelcomeItem from '@/components/WelcomeItem.vue'
 import DocumentationIcon from '@/components/icons/IconDocumentation.vue'
@@ -80,7 +80,7 @@ const selectTab = (index: number) => {
               <li>React, Vue.js, Shopify Liquid</li>
               <li>Node.js, Python, Java, C/C++, C#/.NET</li>
 
-              <li>MySQL, PostgreSQL, NoSQL Databases</li>
+              <li>SQL/NoSQL Databases</li>
               <li>RESTful APIs, GraphQL</li>
 
               <li>Git, GitHub, GitLab</li>

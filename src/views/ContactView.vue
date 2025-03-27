@@ -13,26 +13,23 @@ import IconsComponent from '@/components/IconsComponent.vue'
       <div class="contact-item">
         <IconsComponent icon="location" />
         <div class="contact-item-text">
-          <span>Location:</span>
           <span>Montreal, QC</span>
         </div>
       </div>
 
-      <div class="contact-item">
-        <a href="mailto:afaruqaliu@hotmail.com"><IconsComponent icon="email" /></a>
+      <a class="contact-item" href="mailto:afaruqaliu@hotmail.com">
+        <IconsComponent icon="email" />
         <div class="contact-item-text">
-          <span>Email:</span>
           <span>afaruqaliu@hotmail.com</span>
         </div>
-      </div>
+      </a>
 
-      <div class="contact-item">
-        <a href="tel:+1438887XXXX"><IconsComponent icon="phone" /></a>
+      <!-- <a class="contact-item" href="tel:+1438887XXXX">
+        <IconsComponent icon="phone" />
         <div class="contact-item-text">
-          <span>Phone:</span>
           <span>+1 438 887 XXXX</span>
         </div>
-      </div>
+      </a> -->
     </div>
   </PageContent>
 </template>
@@ -50,15 +47,24 @@ import IconsComponent from '@/components/IconsComponent.vue'
   .contact-item {
     display: flex;
     place-items: center;
+    flex-direction: column;
     gap: 0.5rem;
+
+    color: var(--color-text);
+
+    a& {
+      @media (hover: hover) {
+        &:hover {
+          color: var(--vt-c-green);
+        }
+      }
+    }
   }
 
-  .contact-item-text {
-    display: grid;
-  }
-
+  /* Desktop */
   @media (min-width: 1024px) {
-    .contact-inner {
+    .contact-inner,
+    .contact-item {
       flex-direction: row;
     }
   }
