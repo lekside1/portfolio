@@ -11,8 +11,7 @@ import TypeWriter from './TypeWriter.vue'
 <template>
   <h1 class="title name">{{ title }}</h1>
   <div class="welcome">
-    <!-- <TypeWriter msg="Welcome to my portfolio." /> -->
-    <TypeWriter msg="Website in progress." />
+    <TypeWriter msg="Bienvenue..." />
   </div>
 
   <SocialLinks />
