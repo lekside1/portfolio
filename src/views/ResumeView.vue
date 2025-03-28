@@ -140,7 +140,6 @@ const educationCardItems = ref([
       </div>
 
       <div class="tab-content">
-        <!-- TODO: Summary -->
         <div v-if="selectedTab === 0">
           <div class="tab-content-item">
             <h2 class="green">Professional Summary</h2>

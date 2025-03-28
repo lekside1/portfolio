@@ -8,7 +8,6 @@ import IconsComponent from '@/components/IconsComponent.vue'
   <PageContent class="contact">
     <TitleComponent title="Contact" />
 
-    <!-- TODO: contact page content, icon svgs -->
     <div class="contact-inner">
       <div class="contact-item">
         <IconsComponent icon="location" />
