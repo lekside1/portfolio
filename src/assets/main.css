@@ -124,8 +124,18 @@ a {
   color: var(--vt-c-green);
 }
 
-.bold {
+.bold,
+strong,
+b {
   font-weight: bold;
+}
+
+.boldish {
+  font-weight: 500;
+}
+
+.small {
+  font-size: 0.9rem;
 }
 
 svg {
