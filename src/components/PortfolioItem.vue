@@ -22,12 +22,11 @@ defineProps<{
   </div>
 </template>
 
-<!-- TODO: box-shadow colour update to match light/ darkk theme -->
 <style scoped>
 .portfolio-item {
   border: 1px solid var(--color-text);
   border-radius: 1rem;
-  box-shadow: 4px 4px #00000040;
+  box-shadow: 4px 4px var(--color-box-shadow);
   display: flex;
   place-content: center;
 
