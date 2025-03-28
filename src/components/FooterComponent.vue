@@ -6,8 +6,7 @@ import GoToTop from './GoToTop.vue'
 <template>
   <footer>
     <div class="quote">
-      <p>“The only way to do great work is to love what you do.”</p>
-      <p>– Steve Jobs</p>
+      <p>"The best way to predict the future is to create it." - Abraham Lincoln</p>
     </div>
 
     <SocialLinks />
