@@ -4,15 +4,9 @@ import { ref } from 'vue'
 import TitleComponent from '@/components/TitleComponent.vue'
 import PageContent from '@/components/PageContent.vue'
 import IconsComponent from '@/components/IconsComponent.vue'
+import CardItem from '@/components/CardItem.vue'
 
 import resume from '@/assets/afa-resume.pdf'
-
-import WelcomeItem from '@/components/WelcomeItem.vue'
-import DocumentationIcon from '@/components/icons/IconDocumentation.vue'
-import ToolingIcon from '@/components/icons/IconTooling.vue'
-import EcosystemIcon from '@/components/icons/IconEcosystem.vue'
-import CommunityIcon from '@/components/icons/IconCommunity.vue'
-import SupportIcon from '@/components/icons/IconSupport.vue'
 
 const tabs = ref([
   { title: 'Summary', icon: 'summary' },
@@ -25,6 +19,91 @@ const selectedTab = ref(0)
 const selectTab = (index: number) => {
   selectedTab.value = index
 }
+
+const workExpCardItems = ref([
+  {
+    title: 'Software Developer - Team Lead',
+    company: 'Molsoft Inc.',
+    location: 'Montreal, Quebec',
+    date: 'Mar 2023 - Sept 2024',
+    description: [
+      'Led a team of 3 developers across multiple projects; from design phase to completion, and ongoing maintenance.',
+      'Developed custom Shopify themes and apps, ensuring responsive design and seamless user experience.',
+      'Collaborated with product, design, and integration teams.',
+      'Troubleshoot and optimize websites to increase performance, SEO, and security.',
+      'Performed unit testing, and wrote documentation to standardize project workflows and support team onboarding.',
+      'Performed code reviews, ensuring adherence to coding standards',
+      'Performed quality assurance to maintain high-quality output.',
+      'Mentored junior developers, providing guidance on best practices and technical skills.',
+    ],
+    techStack:
+      'Javascript, Typescript, React, Shopify Liquid, Shopify Hydrogen, HTML, CSS/SCSS, REST API,  GraphQL, Node.js, Vanilla extract',
+  },
+  {
+    title: 'Front-end Developer',
+    company: 'Molsoft Inc.',
+    location: 'Montreal, Quebec',
+    date: 'May 2021 - Mar 2023',
+    description: [
+      'Developed custom Shopify themes ensuring responsive design and seamless user experience across devices.',
+      'Troubleshoot and optimize websites to increase performance, SEO, and security.',
+      'Performed unit testing, and wrote documentation to standardize project workflows and support team onboarding.',
+      'Performed code reviews, ensuring adherence to coding standards',
+    ],
+    techStack: 'Javascript, React, Shopify Liquid, HTML, CSS/SCSS',
+  },
+  {
+    title: 'Web Developer for CTCM - Intern',
+    company: 'CTCM (Corning Technology Center Montreal - iBwave Solutions)',
+    location: 'St-Laurent, Quebec',
+    date: 'Sept 2020 - Dec 2020',
+    description: [
+      'Member of the DNA (Dense Network Architecture) Team.',
+      'Developed features for the DNA multi-connected network map.',
+    ],
+    techStack:
+      'JavaScript, TypeScript, React, HTML, CSS, OpenLayers, PostgreSQL, C#/.Net, Microsoft Azure',
+  },
+  {
+    title: 'Information Technology System Assistant - Intern',
+    company: 'Wapikoni Mobile',
+    location: 'Montreal, Quebec',
+    date: 'May 2020 - Aug 2020',
+    description: [
+      'Performed front-end development on the Wapikoni website.',
+      'Collaborated with various teams to assess organizational needs.',
+      'Proposed and implemented an optimized file storage and sharing solution, improving cross-team collaboration and accessibility of resources.',
+    ],
+    techStack: 'HTML, CSS, JavaScript, Google Drive',
+  },
+  {
+    title: 'Web Developer - Intern',
+    company: 'CAE Inc.',
+    location: 'St-Laurent, Quebec',
+    date: 'Sept 2019 - Dec 2019',
+    description: [
+      'Member of the Civil Aviation Courseware Development Team.',
+      'Front-end development on the Civil Aviation Courseware software.',
+    ],
+    techStack: 'JavaScript, React, Vue.js, HTML, CSS, PouchDB/CouchDB',
+  },
+])
+
+const educationCardItems = ref([
+  {
+    title: 'Bachelor of Computer Science – General Program Co-op',
+    school: 'Gina Cody School of Engineering and Computer Science, Concordia University',
+    location: 'Montreal, Quebec',
+    date: '2018 - 2021',
+    description: ['Member of the Institute for Co-operative Education'],
+  },
+  {
+    title: 'Bachelor of Science – Specialization in Biology',
+    school: 'Concordia University',
+    location: 'Montreal, Quebec',
+    date: '2013 - 2016',
+  },
+])
 </script>
 
 <template>
@@ -66,10 +145,16 @@ const selectTab = (index: number) => {
           <div class="tab-content-item">
             <h2 class="green">Professional Summary</h2>
             <p>
-              Detail-oriented Software Developer with experience developing innovative software
-              solutions. Demonstrates collaborative teamwork, strong communication skills, and
-              excels at efficiently resolving issues. A quick learner with a results-driven mindset,
-              committed to delivering high-quality results in fast-paced environments..
+              <strong>Detail-oriented Software Developer</strong> with a proven ability to
+              collaborate in teams, communicate effectively, and efficiently resolve complex
+              technical challenges. A quick learner with a <strong>results-driven mindset</strong>,
+              committed to delivering <strong>high-quality, innovative solutions</strong>.
+              Proficient in <strong>modern development frameworks, languages, and tools</strong>,
+              with expertise in
+              <strong
+                >React, TypeScript, Shopify Liquid, Node.js, GraphQL, and SQL/NoSQL
+                databases</strong
+              >, ensuring scalable and robust software delivery.
             </p>
           </div>
 
@@ -91,188 +176,29 @@ const selectTab = (index: number) => {
           </div>
         </div>
 
-        <!-- TODO: Work experience -->
-        <div v-if="selectedTab === 1">
-          <WelcomeItem>
-            <template #icon>
-              <DocumentationIcon />
-            </template>
-            <template #heading>Work experience</template>
-
-            Vue’s
-            <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-            provides you with all information you need to get started.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <ToolingIcon />
-            </template>
-            <template #heading>Tooling</template>
-
-            This project is served and bundled with
-            <a href="https://vite.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>.
-            The recommended IDE setup is
-            <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a>
-            +
-            <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a
-            >. If you need to test your components and web pages, check out
-            <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a>
-            and
-            <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-              >Cypress Component Testing</a
-            >.
-
-            <br />
-
-            More instructions are available in <code>README.md</code>.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <EcosystemIcon />
-            </template>
-            <template #heading>Ecosystem</template>
-
-            Get official tools and libraries for your project:
-            <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-            <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-            <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a
-            >, and
-            <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener"
-              >Vue Dev Tools</a
-            >. If you need more resources, we suggest paying
-            <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener"
-              >Awesome Vue</a
-            >
-            a visit.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <CommunityIcon />
-            </template>
-            <template #heading>Community</template>
-
-            Got stuck? Ask your question on
-            <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our
-            official Discord server, or
-            <a
-              href="https://stackoverflow.com/questions/tagged/vue.js"
-              target="_blank"
-              rel="noopener"
-              >StackOverflow</a
-            >. You should also subscribe to
-            <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a>
-            and follow the official
-            <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-            twitter account for latest news in the Vue world.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <SupportIcon />
-            </template>
-            <template #heading>Support Vue</template>
-
-            As an independent project, Vue relies on community backing for its sustainability. You
-            can help us by
-            <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener"
-              >becoming a sponsor</a
-            >.
-          </WelcomeItem>
+        <div class="card-items" v-if="selectedTab === 1">
+          <CardItem
+            v-for="item in workExpCardItems"
+            :key="item.title"
+            :title="item.title"
+            :company="item.company"
+            :location="item.location"
+            :date="item.date"
+            :description="item.description"
+            :techStack="item.techStack"
+          />
         </div>
 
-        <!-- TODO: Education -->
-        <div v-if="selectedTab === 2">
-          <WelcomeItem>
-            <template #icon>
-              <DocumentationIcon />
-            </template>
-            <template #heading>Education</template>
-
-            Vue’s
-            <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-            provides you with all information you need to get started.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <ToolingIcon />
-            </template>
-            <template #heading>Tooling</template>
-
-            This project is served and bundled with
-            <a href="https://vite.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>.
-            The recommended IDE setup is
-            <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a>
-            +
-            <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a
-            >. If you need to test your components and web pages, check out
-            <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a>
-            and
-            <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-              >Cypress Component Testing</a
-            >.
-
-            <br />
-
-            More instructions are available in <code>README.md</code>.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <EcosystemIcon />
-            </template>
-            <template #heading>Ecosystem</template>
-
-            Get official tools and libraries for your project:
-            <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-            <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-            <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a
-            >, and
-            <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener"
-              >Vue Dev Tools</a
-            >. If you need more resources, we suggest paying
-            <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener"
-              >Awesome Vue</a
-            >
-            a visit.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <CommunityIcon />
-            </template>
-            <template #heading>Community</template>
-
-            Got stuck? Ask your question on
-            <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our
-            official Discord server, or
-            <a
-              href="https://stackoverflow.com/questions/tagged/vue.js"
-              target="_blank"
-              rel="noopener"
-              >StackOverflow</a
-            >. You should also subscribe to
-            <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a>
-            and follow the official
-            <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-            twitter account for latest news in the Vue world.
-          </WelcomeItem>
-
-          <WelcomeItem>
-            <template #icon>
-              <SupportIcon />
-            </template>
-            <template #heading>Support Vue</template>
-
-            As an independent project, Vue relies on community backing for its sustainability. You
-            can help us by
-            <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener"
-              >becoming a sponsor</a
-            >.
-          </WelcomeItem>
+        <div class="card-items" v-if="selectedTab === 2">
+          <CardItem
+            v-for="item in educationCardItems"
+            :key="item.title"
+            :title="item.title"
+            :school="item.school"
+            :location="item.location"
+            :date="item.date"
+            :description="item.description"
+          />
         </div>
       </div>
     </div>
@@ -310,6 +236,12 @@ const selectTab = (index: number) => {
     li {
       margin-bottom: 1rem;
     }
+  }
+
+  .card-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
   }
 
   /* Desktop */
