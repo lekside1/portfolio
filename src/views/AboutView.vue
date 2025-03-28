@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import TitleComponent from '@/components/TitleComponent.vue'
 import PageContent from '@/components/PageContent.vue'
-// import IconsComponent from '@/components/IconsComponent.vue'
+
+import pipboy from '@/assets/pip-boy.jpg'
 </script>
 
 <template>
@@ -10,8 +11,8 @@ import PageContent from '@/components/PageContent.vue'
 
     <!-- TODO: About page content -->
     <div class="about-inner">
-      <div class="image">
-        <img alt="Vue logo" class="logo-img" src="@/assets/logo.svg" width="400" height="500" />
+      <div v-if="pipboy" class="image">
+        <img alt="pip vault boy" class="about-img" :src="pipboy" width="400" height="500" />
       </div>
 
       <div class="about-content">
@@ -26,12 +27,12 @@ import PageContent from '@/components/PageContent.vue'
           <li><span class="bold">Sports:</span> Football/Soccer, Basketball, Dodgeball</li>
         </ul>
 
-        <div class="information">
+        <!-- <div class="information">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </PageContent>
@@ -49,37 +50,25 @@ import PageContent from '@/components/PageContent.vue'
   .image {
     display: block;
     padding: 1rem;
+
+    .about-img {
+      border-radius: 1rem;
+    }
   }
 
   .about-content {
     padding: 1rem;
 
-    /* ul {
-      list-style: none;
-      padding: 0;
-    } */
-
     li {
-      /* position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.5rem; */
       margin-bottom: 1rem;
     }
-
-    /* li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--vt-c-blue);
-      font-weight: 900;
-    } */
   }
-
+  /*
   .information {
     p {
       margin: 1rem 0;
     }
-  }
+  } */
 
   @media (min-width: 1024px) {
     .about-inner {
