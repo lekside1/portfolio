@@ -65,7 +65,7 @@ const workExpCardItems = ref([
       'JavaScript, TypeScript, React, HTML, CSS, OpenLayers, PostgreSQL, C#/.Net, Microsoft Azure',
   },
   {
-    title: 'Information Technology System Assistant - Intern',
+    title: 'Information Technology System Consultant - Intern',
     company: 'Wapikoni Mobile',
     location: 'Montreal, Quebec',
     date: 'May 2020 - Aug 2020',
@@ -170,7 +170,7 @@ const educationCardItems = ref([
               <li>Git, GitHub, GitLab</li>
               <li>Agile, Scrum, Kanban</li>
 
-              <li>Shopify Plus, Shopify Hydrogen, Figma, Jira, Confluence</li>
+              <li>Shopify Plus, Shopify Hydrogen, Figma, Jira, Confluence, Storybook</li>
             </ul>
           </div>
         </div>
