@@ -22,7 +22,7 @@ const selectTab = (index: number) => {
 
 const workExpCardItems = ref([
   {
-    title: 'Software Developer - Team Lead',
+    title: 'Web Developer - Team Lead',
     company: 'Molsoft Inc.',
     location: 'Montreal, Quebec',
     date: 'Mar 2023 - Sept 2024',
