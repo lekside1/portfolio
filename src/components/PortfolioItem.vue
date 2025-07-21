@@ -4,7 +4,9 @@ import IconsComponent from './IconsComponent.vue'
 defineProps<{
   name: string
   site: string
-  image?: string
+  image: string
+  icon?: string
+  description?: string[]
 }>()
 </script>
 
@@ -28,8 +30,20 @@ defineProps<{
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="portfolio-item-name bold">{{ name }}</span>
-      <IconsComponent icon="external-link" />
+      <div v-if="icon" class="portfolio-item-icon">
+        <img :src="icon" :alt="`${name} icon`" />
+      </div>
+
+      <div v-if="description" class="portfolio-item-description boldish">
+        <div v-for="(desc, idx) in description" :key="idx">
+          {{ desc }}
+        </div>
+      </div>
+
+      <div class="portfolio-item-text">
+        <span class="portfolio-item-name bold">{{ name }}</span>
+        <IconsComponent icon="external-link" />
+      </div>
     </a>
   </div>
 </template>
@@ -46,14 +60,30 @@ defineProps<{
   min-width: 300px;
   min-height: 250px;
 
+  .portfolio-item-icon {
+    width: 110px;
+  }
+
   .portfolio-item-link {
-    width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 0.5rem;
+    width: 100%;
     padding: 1rem;
     color: var(--vt-c-white-soft);
+  }
+
+  .portfolio-item-description {
+    margin-top: 0.5rem;
+  }
+
+  .portfolio-item-text {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    width: 100%;
+    margin-top: auto;
   }
 
   .portfolio-item-name {
