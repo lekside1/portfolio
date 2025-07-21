@@ -113,11 +113,7 @@ const educationCardItems = ref([
     <div class="tabs-container">
       <div class="tabs">
         <button
-          :class="[
-            'tab-button',
-            index % 2 === 0 ? 'button' : 'button button-tertiary',
-            { active: selectedTab === index },
-          ]"
+          :class="['tab-button', 'button', { active: selectedTab === index }]"
           v-for="(tab, index) in tabs"
           :key="index"
           :aria-label="tab.title"
@@ -144,12 +140,13 @@ const educationCardItems = ref([
           <div class="tab-content-item">
             <h2 class="green">Professional Summary</h2>
             <p>
-              <strong>Detail-oriented Software Developer</strong> with a proven ability to
-              collaborate in teams, communicate effectively, and efficiently resolve complex
-              technical challenges. A quick learner with a <strong>results-driven mindset</strong>,
-              committed to delivering <strong>high-quality, innovative solutions</strong>.
-              Proficient in <strong>modern development frameworks, languages, and tools</strong>,
-              with expertise in
+              <strong>Detail-oriented Software Developer</strong> with over 4 years of experience
+              and a proven ability to collaborate in teams, communicate effectively, and efficiently
+              resolve complex technical challenges. A quick learner with a
+              <strong>results-driven mindset</strong>, committed to delivering
+              <strong>high-quality, innovative solutions</strong>. Proficient in
+              <strong>modern development frameworks, languages, and tools</strong>, with expertise
+              in
               <strong
                 >React, TypeScript, Shopify Liquid, Node.js, GraphQL, and SQL/NoSQL
                 databases</strong
@@ -161,7 +158,7 @@ const educationCardItems = ref([
             <h2 class="green">Summary of Skills</h2>
             <ul>
               <li>HTML, CSS/SCSS, JavaScript, TypeScript</li>
-              <li>React, Vue.js, Shopify Liquid</li>
+              <li>React.js, Vue.js, Shopify Liquid</li>
               <li>Node.js, Python, Java, C/C++, C#/.NET</li>
 
               <li>SQL/NoSQL Databases</li>
