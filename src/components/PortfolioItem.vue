@@ -61,7 +61,11 @@ defineProps<{
   min-height: 250px;
 
   .portfolio-item-icon {
-    width: 110px;
+    width: 150px;
+
+    img {
+      max-height: 50px;
+    }
   }
 
   .portfolio-item-link {
