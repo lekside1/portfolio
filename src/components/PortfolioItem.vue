@@ -4,7 +4,7 @@ import IconsComponent from './IconsComponent.vue'
 defineProps<{
   name: string
   site: string
-  image: string
+  image?: string
   icon?: string
   description?: string[]
 }>()
@@ -34,8 +34,8 @@ defineProps<{
         <img :src="icon" :alt="`${name} icon`" />
       </div>
 
-      <div v-if="description" class="portfolio-item-description boldish">
-        <div v-for="(desc, idx) in description" :key="idx">
+      <div v-if="description && description.length > 0" class="portfolio-item-description">
+        <div v-for="(desc, idx) in description" :key="idx" class="boldish">
           {{ desc }}
         </div>
       </div>
@@ -76,10 +76,11 @@ defineProps<{
     width: 100%;
     padding: 1rem;
     color: var(--vt-c-white-soft);
+    background-color: var(--background-overlay);
   }
 
   .portfolio-item-description {
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
   }
 
   .portfolio-item-text {
