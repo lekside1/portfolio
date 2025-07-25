@@ -1,8 +1,8 @@
-# portfolio
+# Portfolio
+
+See [Portfolio live website](https://lekside1.github.io/portfolio/)
 
 This is developed with Vue 3 in Vite.
-
-Click to see live website [Portfolio](https://lekside1.github.io/portfolio/)
 
 ## Recommended IDE Setup
 
