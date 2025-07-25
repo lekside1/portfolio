@@ -2,6 +2,8 @@
 
 This is developed with Vue 3 in Vite.
 
+Click to see live website [Portfolio](https://lekside1.github.io/portfolio/)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
