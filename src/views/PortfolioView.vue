@@ -187,7 +187,7 @@ const portfolioItems = ref([
 
 <template>
   <PageContent class="portfolio">
-    <TitleComponent title="Portfolio" />
+    <TitleComponent title="Projects" />
 
     <div class="portfolio-inner">
       <PortfolioItem

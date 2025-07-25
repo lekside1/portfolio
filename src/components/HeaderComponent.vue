@@ -45,8 +45,8 @@ const toggleDrawer = () => {
         <RouterLink class="nav-item" to="/contact">
           <IconsComponent icon="contact" />Contact
         </RouterLink>
-        <RouterLink class="nav-item" to="/portfolio">
-          <IconsComponent icon="portfolio" />Portfolio
+        <RouterLink class="nav-item" to="/projects">
+          <IconsComponent icon="portfolio-projects" />Projects
         </RouterLink>
       </nav>
 
@@ -72,8 +72,8 @@ const toggleDrawer = () => {
         <RouterLink class="nav-item" to="/contact" @click="toggleDrawer">
           <IconsComponent icon="contact" />Contact
         </RouterLink>
-        <RouterLink class="nav-item" to="/portfolio" @click="toggleDrawer">
-          <IconsComponent icon="portfolio" />Portfolio
+        <RouterLink class="nav-item" to="/projects" @click="toggleDrawer">
+          <IconsComponent icon="portfolio-projects" />Projects
         </RouterLink>
       </nav>
     </div>
