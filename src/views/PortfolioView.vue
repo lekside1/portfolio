@@ -20,6 +20,7 @@ import opus from '@/assets/opus.png'
 import unique from '@/assets/unique.png'
 import sportsExcellence from '@/assets/sports-excellence.png'
 import woodstock from '@/assets/woodstock.png'
+import gisele from '@/assets/gisele.png'
 import holos from '@/assets/holos.png'
 
 import marcelleIcon from '@/assets/marcelle.svg'
@@ -37,6 +38,7 @@ import opusIcon from '@/assets/opus.svg'
 import uniqueIcon from '@/assets/unique.svg'
 import sportsExcellenceIcon from '@/assets/sports-excellence.svg'
 import woodstockIcon from '@/assets/woodstock.svg'
+import giseleIcon from '@/assets/gisele.svg'
 import holosIcon from '@/assets/holos.svg'
 
 const portfolioItems = ref([
@@ -173,6 +175,13 @@ const portfolioItems = ref([
     site: 'https://woodstockcie.com/',
     image: woodstock,
     icon: woodstockIcon,
+    description: ['Custom Shopify theme', 'UX/UI'],
+  },
+  {
+    name: 'Gisele',
+    site: 'https://giselebeaute.ca/',
+    image: gisele,
+    icon: giseleIcon,
     description: ['Custom Shopify theme', 'UX/UI'],
   },
   {
