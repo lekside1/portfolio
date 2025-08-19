@@ -124,6 +124,10 @@ a {
   color: var(--vt-c-green);
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .bold,
 strong,
 b {
