@@ -3,7 +3,7 @@ defineProps<{
   title: string
   company?: string
   school?: string
-  location: string
+  location?: string
   date: string
   description?: string[]
   techStack?: string
@@ -15,9 +15,9 @@ defineProps<{
     <h2 class="card-item-title bold green">{{ title }}</h2>
 
     <div class="card-item-info">
-      <span v-if="company" class="card-item-company boldish">{{ company }}, </span>
-      <span v-else-if="school" class="card-item-school boldish">{{ school }}, </span>
-      <span class="card-item-location">{{ location }}</span>
+      <span v-if="company" class="card-item-company boldish">{{ company }}</span>
+      <span v-else-if="school" class="card-item-school boldish">{{ school }}</span>
+      <span v-if="location" class="card-item-location">, {{ location }}</span>
 
       <p class="card-item-date boldish green small">{{ date }}</p>
     </div>
