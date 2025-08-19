@@ -9,12 +9,17 @@ import IconsComponent from '@/components/IconsComponent.vue'
     <TitleComponent title="Contact" />
 
     <div class="contact-inner">
-      <div class="contact-item">
+      <a
+        class="contact-item"
+        href="https://www.google.com/maps/place/Montreal,+QC"
+        target="_blank"
+        rel="noopener"
+      >
         <IconsComponent icon="location" />
         <div class="contact-item-text">
           <span>Montreal, QC</span>
         </div>
-      </div>
+      </a>
 
       <a class="contact-item" href="mailto:afaruqaliu@hotmail.com">
         <IconsComponent icon="email" />
@@ -22,13 +27,6 @@ import IconsComponent from '@/components/IconsComponent.vue'
           <span>afaruqaliu@hotmail.com</span>
         </div>
       </a>
-
-      <!-- <a class="contact-item" href="tel:+1438887XXXX">
-        <IconsComponent icon="phone" />
-        <div class="contact-item-text">
-          <span>+1 438 887 XXXX</span>
-        </div>
-      </a> -->
     </div>
   </PageContent>
 </template>
