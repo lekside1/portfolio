@@ -24,15 +24,7 @@ import pipboy from '@/assets/pip-boy.jpg'
             <span class="bold">Interests:</span> Science and Technology, Video Games, Fine Arts,
             Music, Languages, Traveling
           </li>
-          <li><span class="bold">Sports:</span> Football/Soccer, Basketball, Dodgeball</li>
         </ul>
-
-        <!-- <div class="information">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div> -->
       </div>
     </div>
   </PageContent>
