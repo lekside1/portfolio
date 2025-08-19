@@ -2,7 +2,7 @@
 
 See [Portfolio live website](https://lekside1.github.io/portfolio/)
 
-This is developed with Vue 3 in Vite.
+This web application is developed with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
@@ -47,6 +47,11 @@ npm run lint
 ```
 
 ## Deploy to github pages
+### Automatic method using npm package "gh-pages"
+- Run command `npm run deploy`
+- This will cause the `predeploy` and `deploy` scripts defined in package.json to run
+- It will take the latest /dist folder push it into the gh-pages branch
+
 ### Manual method
 - On remote repository, delete branch "gh-pages"
 - In local repository, run commands: 
@@ -54,8 +59,3 @@ npm run lint
   - `git add dist -f`
   - `git commit -m "update dist folder"`
   - `git subtree push --prefix dist origin gh-pages`
-
-### Automatic method using npm package "gh-pages"
-- Run command `npm run deploy`
-- This will cause the `predeploy` and `deploy` scripts defined in package.json to run
-- It will take the latest /dist folder push it into the gh-pages branch
