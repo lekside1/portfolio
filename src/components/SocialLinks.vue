@@ -15,9 +15,9 @@ import IconsComponent from './IconsComponent.vue'
     <a class="icon" href="https://github.com/lekside1" target="_blank" rel="noopener noreferrer">
       <IconsComponent icon="github" />
     </a>
-    <a class="icon" href="https://codepen.io/lekside1" target="_blank" rel="noopener noreferrer">
+    <!-- <a class="icon" href="https://codepen.io/lekside1" target="_blank" rel="noopener noreferrer">
       <IconsComponent icon="codepen" />
-    </a>
+    </a> -->
   </div>
 </template>
 
