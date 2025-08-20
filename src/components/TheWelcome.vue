@@ -4,8 +4,11 @@ defineProps<{
   content?: string
 }>()
 
+import { RouterLink } from 'vue-router'
+
 import SocialLinks from './SocialLinks.vue'
 import TypeWriter from './TypeWriter.vue'
+import IconsComponent from './IconsComponent.vue'
 </script>
 
 <template>
@@ -14,7 +17,10 @@ import TypeWriter from './TypeWriter.vue'
     <TypeWriter msg="● Software Developer ●" />
   </div>
 
-  <SocialLinks />
+  <div class="welcome-links">
+    <SocialLinks />
+    <RouterLink class="icon" to="/resume"> <IconsComponent icon="resume" /></RouterLink>
+  </div>
 </template>
 
 <style scoped>
@@ -28,6 +34,23 @@ import TypeWriter from './TypeWriter.vue'
   /* Desktop */
   @media (min-width: 1024px) {
     margin: 1rem auto;
+  }
+}
+
+.welcome-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+
+  .icon {
+    color: var(--color-text);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--vt-c-green);
+      }
+    }
   }
 }
 </style>
