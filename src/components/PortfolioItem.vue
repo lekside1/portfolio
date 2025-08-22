@@ -31,7 +31,7 @@ defineProps<{
       rel="noopener noreferrer"
     >
       <div v-if="icon" class="portfolio-item-icon">
-        <img :src="icon" :alt="`${name} icon`" />
+        <img :src="icon" :alt="`${name} icon`" loading="lazy" />
       </div>
 
       <div v-if="description && description.length > 0" class="portfolio-item-description">
@@ -77,6 +77,7 @@ defineProps<{
     padding: 1rem;
     color: var(--vt-c-white-soft);
     background-color: var(--background-overlay);
+    border-radius: inherit;
   }
 
   .portfolio-item-description {

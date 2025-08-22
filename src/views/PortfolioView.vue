@@ -10,6 +10,7 @@ import aib from '@/assets/aib.png'
 import watier from '@/assets/watier.png'
 import bentley from '@/assets/bentley.png'
 import molsoft from '@/assets/molsoft.png'
+import brulerieDuQuai from '@/assets/brulerie-du-quai.png'
 import lecompte from '@/assets/lecompte.png'
 import parmi from '@/assets/parmi.png'
 import gardeMalade from '@/assets/garde-malade.png'
@@ -28,6 +29,7 @@ import aibIcon from '@/assets/aib.svg'
 import watierIcon from '@/assets/watier.svg'
 import bentleyIcon from '@/assets/bentley.svg'
 import molsoftIcon from '@/assets/molsoft.svg'
+import brulerieDuQuaiIcon from '@/assets/brulerie-du-quai-icon.png'
 import lecompteIcon from '@/assets/lecompte.svg'
 import parmiIcon from '@/assets/parmi.svg'
 import gardeMaladeIcon from '@/assets/garde-malade.svg'
@@ -48,7 +50,8 @@ const portfolioItems = ref([
     image: marcelle,
     icon: marcelleIcon,
     description: [
-      'Platform Migration',
+      // 'Platform Migration',
+      'Custom Shopify theme',
       'Maintenance & Optimization',
       'UX/UI',
       '+32% Sales Growth',
@@ -74,7 +77,8 @@ const portfolioItems = ref([
     image: watier,
     icon: watierIcon,
     description: [
-      'Platform Migration',
+      // 'Platform Migration',
+      'Custom Shopify theme',
       'Maintenance & Optimization',
       'UX/UI',
       '+32% Sales Growth',
@@ -88,7 +92,8 @@ const portfolioItems = ref([
     image: bentley,
     icon: bentleyIcon,
     description: [
-      'Maintenance & Optimization',
+      // 'Maintenance & Optimization',
+      'Custom Shopify theme',
       'Improved Customer Experience',
       '129% Year-over-Year Growth',
       '+74% Online Sales Growth',
@@ -100,7 +105,18 @@ const portfolioItems = ref([
     site: 'https://www.molsoft.io/',
     image: molsoft,
     icon: molsoftIcon,
-    description: ['Custom Shopify Hydrogen', 'Maintenance & Optimization', 'UX/UI'],
+    description: [
+      'Custom Shopify Headless theme (Hydrogen)',
+      'Maintenance & Optimization',
+      'UX/UI',
+    ],
+  },
+  {
+    name: 'Brûlerie du Quai',
+    site: 'https://www.brulerieduquai.com/',
+    image: brulerieDuQuai,
+    icon: brulerieDuQuaiIcon,
+    description: ['Maintenance & Optimization', 'Improved Customer Experience', 'UX/UI'],
   },
   {
     name: 'Magasins LeCompte',
@@ -189,7 +205,11 @@ const portfolioItems = ref([
     site: 'https://www.liveholos.com/',
     image: holos,
     icon: holosIcon,
-    description: ['Custom Shopify theme', 'Custom Recharge Subscriptions integration', 'UX/UI'],
+    description: [
+      'Custom Shopify theme',
+      'Custom Recharge Customer Subscriptions integration',
+      'UX/UI',
+    ],
   },
 ])
 </script>
