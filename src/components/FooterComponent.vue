@@ -5,9 +5,9 @@ import GoToTop from './GoToTop.vue'
 
 <template>
   <footer>
-    <div class="quote">
+    <!-- <div class="quote">
       <p>"The best way to predict the future is to create it." - Abraham Lincoln</p>
-    </div>
+    </div> -->
 
     <SocialLinks />
 
