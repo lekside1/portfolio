@@ -4,7 +4,7 @@ defineProps<{
   company?: string
   school?: string
   location?: string
-  date: string
+  date?: string
   description?: string[]
   techStack?: string
 }>()
@@ -23,7 +23,12 @@ defineProps<{
     </div>
 
     <ul v-if="description" class="card-item-description">
-      <li v-for="(item, index) in description" :key="index">{{ item }}</li>
+      <template v-if="description.length === 1">
+        <p class="single-description">{{ description[0] }}</p>
+      </template>
+      <template v-else>
+        <li v-for="(item, index) in description" :key="index">{{ item }}</li>
+      </template>
     </ul>
 
     <div v-if="techStack" class="card-item-tech-stack">
@@ -44,6 +49,9 @@ defineProps<{
     margin-top: 0.5rem;
     ul& {
       padding-left: 1.5rem;
+    }
+    .single-description {
+      margin-left: -1.5rem;
     }
   }
 
