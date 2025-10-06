@@ -20,6 +20,39 @@ const selectTab = (index: number) => {
   selectedTab.value = index
 }
 
+const summaryCardItems = ref([
+  {
+    title: 'Professional Summary',
+    description: [
+      'Detail-oriented Software Developer with 4+ years of experience in web development, creating interactive, user-centered scalable web applications. Proficient in modern front-end and back-end technologies, ensuring high performance, clean and maintainable code. Strong problem-solver with a focus on seamless user experience and performanceoptimization. A collaborative team player with the ability to effectively translate business goals into robust technical solutions.',
+    ],
+  },
+  {
+    title: 'Skills',
+    description: [
+      'HTML5, CSS/SCSS, TailwindCSS, Vanilla extract, JavaScript, TypeScript',
+      'React.js, Vue.js, Angular, Backbone.js, Shopify Liquid',
+      'Node.js, Python, Java, C#/.NET, C/C++',
+      'SQL/NoSQL Databases',
+      'RESTful APIs, GraphQL, Microsoft Azure',
+      'Git, GitHub, GitLab',
+      'Agile, Scrum, Kanban',
+      'Shopify Plus, Shopify Hydrogen, VS Code, Eclipse, Figma, Jira, Confluence, Storybook',
+      'Code Refactoring, Debugging, Testing, Performance Optimization, Documentation',
+    ],
+  },
+  {
+    title: 'Continuous Learning & Certifications',
+    school: 'LinkedIn Learning',
+    description: [
+      'Node.js Essential Training',
+      'React.js Essential Training',
+      'Learning Backbone.js',
+      'Responsive Layout',
+    ],
+  },
+])
+
 const workExpCardItems = ref([
   {
     title: 'Web Developer - Team Lead',
@@ -27,18 +60,16 @@ const workExpCardItems = ref([
     location: 'Montreal, Quebec',
     date: 'Mar 2023 - Sept 2024',
     description: [
-      'Led a team of 3 developers across multiple projects; from design phase to completion, and ongoing maintenance.',
-      'Developed custom Shopify themes and apps, ensuring responsive design and seamless user experience.',
-      'Collaborated with product, design, and integration teams.',
-      'Implemented and optimized internal tools, boosting productivity and reducing project completion time.',
-      'Troubleshoot and optimize websites to increase performance, SEO, accessibility and security.',
+      'Led and mentored a team of 3 developers to deliver custom Shopify and web applications, driving projects from design through deployment and ongoing maintenance.',
+      'Developed and optimized internal tools, boosting productivity and reducing project completion time.',
+      'Collaborated with product and design teams to translate business requirements and prototypes into scalable, user-friendly applications that improved customer engagement and conversion.',
+      'Collaborated with QA to identify and resolve critical bugs, improving overall code quality.',
+      'Troubleshot and optimized websites to increase performance, SEO, accessibility and security.',
       'Performed unit testing, and wrote documentation to standardize project workflows and support team onboarding.',
-      'Performed code reviews, ensuring adherence to coding standards',
-      'Performed quality assurance to maintain high-quality output.',
-      'Mentored junior developers, providing guidance on best practices and technical skills.',
+      'Conducted code reviews, and documentation to ensure seamless knowledge transfer.',
     ],
     techStack:
-      'Javascript, Typescript, React, Shopify Liquid, Shopify Hydrogen, HTML, CSS/SCSS, Tailwind, Vanilla extract, GraphQL, Node.js',
+      'Javascript, Typescript, React.js, Shopify Liquid, Shopify Hydrogen, HTML, CSS/SCSS, TailwindCSS, Vanilla extract, GraphQL, Node.js',
   },
   {
     title: 'Front-end Developer',
@@ -46,12 +77,12 @@ const workExpCardItems = ref([
     location: 'Montreal, Quebec',
     date: 'May 2021 - Mar 2023',
     description: [
-      'Developed custom Shopify themes ensuring responsive design and seamless user experience across devices.',
-      'Troubleshoot and optimize websites to increase performance, SEO, accessibility and security.',
-      'Performed unit testing, and wrote documentation to standardize project workflows and support team onboarding.',
-      'Performed code reviews, ensuring adherence to coding standards',
+      'Enhanced Shopify themes with custom features, ensuring responsive design and improving performance and user experience.',
+      'Optimized websites for improved SEO, accessibility, and security, resulting in faster load times.',
+      'Performed unit testing, and wrote documentation to standardize project workflows.',
+      'Conducted code reviews,  onboarded and mentored junior developers on best practices.',
     ],
-    techStack: 'Javascript, React, Shopify Liquid, HTML, CSS/SCSS',
+    techStack: 'Javascript, React.js, Shopify Liquid, HTML, CSS/SCSS',
   },
   {
     title: 'Web Developer Intern - CTCM',
@@ -59,11 +90,11 @@ const workExpCardItems = ref([
     location: 'Montreal, Quebec',
     date: 'Sept 2020 - Dec 2020',
     description: [
-      'Implemented features on an internal telecommunication network application',
-      'Shadowed developers to learn key details about job duties and tasks.',
+      'Implemented new features for an internal telecommunication network mapping web application tool.',
+      'Collaborated with senior developers, gaining experience with large-scale system development practices.',
     ],
     techStack:
-      'JavaScript, TypeScript, React, HTML, CSS, OpenLayers, PostgreSQL, C#/.Net, Microsoft Azure services',
+      'JavaScript, TypeScript, React.js, HTML, CSS, OpenLayers, PostgreSQL, C#/.Net, Microsoft Azure',
   },
   {
     title: 'Information Technology System Consultant - Intern',
@@ -71,11 +102,11 @@ const workExpCardItems = ref([
     location: 'Montreal, Quebec',
     date: 'May 2020 - Aug 2020',
     description: [
-      "Developed and maintained the organization's internal website improving user experience.",
+      'Enhanced website performance and usability through optimizations and feature development.',
       'Collaborated with various teams to assess organizational needs.',
-      'Implemented a new file-sharing system, improving team collaboration and workflow efficiency.',
+      'Implemented a file-sharing system, improving team collaboration and workflow efficiency.',
     ],
-    techStack: 'HTML, CSS, JavaScript, Google Drive',
+    techStack: 'HTML, CSS, JavaScript',
   },
   {
     title: 'Web Developer Intern - Civil Aviation',
@@ -83,10 +114,10 @@ const workExpCardItems = ref([
     location: 'Montreal, Quebec',
     date: 'Sept 2019 - Dec 2019',
     description: [
-      'Developed features on a civil aviation training courseware application.',
-      'Engaged in continuous learning of emerging technologies, incorporating industry advancements into projects when applicable.',
+      'Developed features for civil aviation training courseware application.',
+      'Researched and applied emerging technologies to improve and optimize development processes.',
     ],
-    techStack: 'JavaScript, React, Vue.js, HTML, CSS, PouchDB/CouchDB',
+    techStack: 'JavaScript, React.js, Vue.js, Angular, HTML, CSS, PouchDB/CouchDB',
   },
 ])
 
@@ -103,17 +134,6 @@ const educationCardItems = ref([
     school: 'Concordia University',
     location: 'Montreal, Quebec',
     date: '2013 - 2016',
-  },
-  {
-    title: 'Certifications',
-    school: 'LinkedIn Learning',
-    date: '2019',
-    description: [
-      'Node.js Essential Training (Nov 2019)',
-      'React.js Essential Training (Nov 2019)',
-      'Learning Backbone.js (Oct 2019)',
-      'Responsive Layout (Oct 2019)',
-    ],
   },
 ])
 </script>
@@ -148,38 +168,14 @@ const educationCardItems = ref([
       </div>
 
       <div class="tab-content">
-        <div v-if="selectedTab === 0">
-          <div class="tab-content-item">
-            <h2 class="green uppercase">Professional Summary</h2>
-            <p>
-              Detail-oriented Software Developer with 4+ years of experience in web development,
-              creating interactive, user-centered scalable web applications. Proficient in modern
-              front-end and back-end technologies, ensuring high performance, clean and maintainable
-              code. Strong problem-solver with a focus on seamless user experience and performance
-              optimization. A collaborative team player with the ability to effectively translate
-              business goals into robust technical solutions.
-            </p>
-          </div>
-
-          <div class="tab-content-item">
-            <h2 class="green uppercase">Skills</h2>
-            <ul>
-              <li>HTML, CSS/SCSS, JavaScript, TypeScript</li>
-              <li>React.js, Vue.js, Backbone.js, Shopify Liquid</li>
-              <li>Node.js, Python, Java, C/C++, C#/.NET</li>
-
-              <li>SQL/NoSQL Databases</li>
-              <li>RESTful APIs, GraphQL, Microsoft Azure</li>
-
-              <li>Git, GitHub, GitLab</li>
-              <li>Agile, Scrum, Kanban</li>
-
-              <li>
-                Shopify Plus, Shopify Hydrogen, VS Code, Eclipse, Figma, Jira, Confluence, Storybook
-              </li>
-              <li>Code Refactoring, Debugging, Testing, Performance Optimization, Documentation</li>
-            </ul>
-          </div>
+        <div class="card-items card-item--first-full-width" v-if="selectedTab === 0">
+          <CardItem
+            v-for="item in summaryCardItems"
+            :key="item.title"
+            :title="item.title"
+            :school="item.school"
+            :description="item.description"
+          />
         </div>
 
         <div class="card-items" v-if="selectedTab === 1">
@@ -231,23 +227,17 @@ const educationCardItems = ref([
     gap: 1.5rem;
   }
 
-  .tab-content-item {
-    padding: 1rem 0;
-
-    p,
-    ul {
-      margin: 0.5rem 0;
-    }
-
-    li {
-      margin-bottom: 1rem;
-    }
-  }
-
   .card-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
+  }
+
+  .card-item--first-full-width {
+    & :first-child {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
   }
 
   /* Desktop */
