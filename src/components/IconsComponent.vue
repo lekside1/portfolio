@@ -96,7 +96,7 @@ const getIconComponent = (icon: string) => {
     case 'external-link':
       return {
         template:
-          '<svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M790 790H208V208h291v-83H208q-35 0-59 24.5T125 208v582q0 35 24 59t59 24h582q35 0 59-24t24-59V499h-83zM582 125v83h150L323 617l58 58 409-408v149h83V125z"/></svg>',
+          '<svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 8.5v-5h-5m5 0-7 7m-1-7h-5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       }
     case 'location':
       return {
