@@ -50,7 +50,6 @@ const portfolioItems = ref([
     image: marcelle,
     icon: marcelleIcon,
     description: [
-      // 'Platform Migration',
       'Custom Shopify theme',
       'Maintenance & Optimization',
       'UX/UI',
@@ -77,7 +76,6 @@ const portfolioItems = ref([
     image: watier,
     icon: watierIcon,
     description: [
-      // 'Platform Migration',
       'Custom Shopify theme',
       'Maintenance & Optimization',
       'UX/UI',
@@ -92,7 +90,6 @@ const portfolioItems = ref([
     image: bentley,
     icon: bentleyIcon,
     description: [
-      // 'Maintenance & Optimization',
       'Custom Shopify theme',
       'Improved Customer Experience',
       '129% Year-over-Year Growth',
@@ -106,7 +103,7 @@ const portfolioItems = ref([
     image: molsoft,
     icon: molsoftIcon,
     description: [
-      'Custom Shopify Headless theme (Hydrogen)',
+      'Custom Shopify Headless Build (Hydrogen)',
       'Maintenance & Optimization',
       'UX/UI',
     ],
