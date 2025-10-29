@@ -19,7 +19,7 @@ import IconsComponent from './IconsComponent.vue'
 
   <div class="welcome-links">
     <SocialLinks />
-    <RouterLink class="icon" to="/resume"> <IconsComponent icon="resume" /></RouterLink>
+    <RouterLink class="icon" to="/resume" title="View Resume"> <IconsComponent icon="resume" /></RouterLink>
   </div>
 </template>
 
