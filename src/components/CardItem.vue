@@ -33,7 +33,7 @@ defineProps<{
 
     <div v-if="techStack" class="card-item-tech-stack">
       <span class="boldish green">Tech Stack: </span>
-      <p class="boldish">{{ techStack }}</p>
+      <span class="boldish">{{ techStack }}</span>
     </div>
   </div>
 </template>
