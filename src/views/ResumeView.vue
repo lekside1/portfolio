@@ -30,15 +30,14 @@ const summaryCardItems = ref([
   {
     title: 'Skills',
     description: [
-      'HTML5, CSS/SCSS, TailwindCSS, Vanilla extract, JavaScript, TypeScript',
-      'React.js, Vue.js, Angular, Backbone.js, Shopify Liquid',
-      'Node.js, Python, Java, C#/.NET, C/C++',
-      'SQL/NoSQL Databases',
-      'RESTful APIs, GraphQL, Microsoft Azure',
-      'Git, GitHub, GitLab',
-      'Agile, Scrum, Kanban',
-      'Shopify Plus, Shopify Hydrogen, VS Code, Eclipse, Figma, Jira, Confluence, Storybook',
-      'Code Refactoring, Debugging, Testing, Performance Optimization, Documentation',
+      'HTML5 | CSS/SCSS | TailwindCSS | Vanilla extract | JavaScript | TypeScript',
+      'React.js | Vue.js | AngularJS | Backbone.js | Shopify Liquid',
+      'Node.js | Python | Java | C#/.NET | C/C++',
+      'SQL (PostgreSQL, MySQL) | NoSQL (CouchDB, PouchDB) Databases',
+      'RESTful APIs | GraphQL | Microsoft Azure',
+      'Agile | Scrum | Kanban | Git | GitHub | GitLab | CI/CD',
+      'Shopify Plus | Shopify Hydrogen | Storybook | Figma | Jira | Confluence',
+      'Code Refactoring | Code Review | Code Maintenance | Debugging | Testing | Performance Optimization | Documentation',
     ],
   },
   {
@@ -106,7 +105,7 @@ const workExpCardItems = ref([
       'Collaborated with various teams to assess organizational needs.',
       'Implemented a file-sharing system, improving team collaboration and workflow efficiency.',
     ],
-    techStack: 'HTML, CSS, JavaScript',
+    techStack: 'HTML, CSS, JavaScript, AngularJS',
   },
   {
     title: 'Web Developer Intern - Civil Aviation',
@@ -117,7 +116,7 @@ const workExpCardItems = ref([
       'Developed features for civil aviation training courseware application.',
       'Researched and applied emerging technologies to improve and optimize development processes.',
     ],
-    techStack: 'JavaScript, React.js, Vue.js, Angular, HTML, CSS, PouchDB/CouchDB',
+    techStack: 'JavaScript, React.js, Vue.js, HTML, CSS/SCSS, PouchDB/CouchDB',
   },
 ])
 
