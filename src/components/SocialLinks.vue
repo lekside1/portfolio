@@ -9,13 +9,20 @@ import IconsComponent from './IconsComponent.vue'
       href="https://linkedin.com/in/faruqaliu/"
       target="_blank"
       rel="noopener noreferrer"
+      title="LinkedIn"
     >
       <IconsComponent icon="linkedin" />
     </a>
-    <a class="icon" href="https://github.com/lekside1" target="_blank" rel="noopener noreferrer">
+    <a
+      class="icon"
+      href="https://github.com/lekside1"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="GitHub"
+    >
       <IconsComponent icon="github" />
     </a>
-    <!-- <a class="icon" href="https://codepen.io/lekside1" target="_blank" rel="noopener noreferrer">
+    <!-- <a class="icon" href="https://codepen.io/lekside1" target="_blank" rel="noopener noreferrer" title="CodePen">
       <IconsComponent icon="codepen" />
     </a> -->
   </div>
