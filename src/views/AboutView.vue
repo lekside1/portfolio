@@ -18,11 +18,11 @@ import pipboy from '@/assets/pip-boy.jpg'
       <div class="about-content about-content--card-item">
         <ul>
           <li><span class="bold">Name:</span> Adelekan Faruq Aliu</li>
-          <li><span class="bold">City:</span> Montreal, Quebec.</li>
+          <li><span class="bold">City:</span> Montreal, Quebec, Canada</li>
           <li><span class="bold">Languages:</span> English, French, Yoruba</li>
           <li>
-            <span class="bold">Interests:</span> Science and Technology, Video Games, Fine Arts,
-            Music, Languages, Traveling
+            <span class="bold">Interests:</span> Science and Technology, Video Games, Anime, Fine
+            Arts, Music, Languages, Traveling
           </li>
         </ul>
       </div>
