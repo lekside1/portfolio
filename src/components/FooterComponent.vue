@@ -12,7 +12,7 @@ import GoToTop from './GoToTop.vue'
     <SocialLinks />
 
     <div class="copy-right">
-      <p>&copy; <b class="bold">Adelekan Faruq Aliu</b> 2024</p>
+      <p>&copy; <b class="bold">Adelekan Faruq Aliu</b> 2024-2025</p>
     </div>
 
     <GoToTop />
