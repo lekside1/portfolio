@@ -21,10 +21,10 @@ import IconsComponent from '@/components/IconsComponent.vue'
         </div>
       </a>
 
-      <a class="contact-item" href="mailto:afaruqaliu@hotmail.com">
+      <a class="contact-item" href="mailto:afaruqaliu@outlook.com">
         <IconsComponent icon="email" />
         <div class="contact-item-text">
-          <span>afaruqaliu@hotmail.com</span>
+          <span>afaruqaliu@outlook.com</span>
         </div>
       </a>
     </div>
