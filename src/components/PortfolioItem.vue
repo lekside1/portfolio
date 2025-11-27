@@ -52,7 +52,7 @@ defineProps<{
 .portfolio-item {
   position: relative;
   border: 1px solid var(--color-text);
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   box-shadow: 4px 4px var(--color-box-shadow);
   display: flex;
   place-content: center;

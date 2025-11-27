@@ -37,7 +37,7 @@ onUnmounted(() => {
   background-color: var(--vt-c-green);
   color: var(--color-background-mute);
   border: none;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   cursor: pointer;
   z-index: 999;
   transition:

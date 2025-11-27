@@ -43,7 +43,7 @@ import pipboy from '@/assets/pip-boy.jpg'
     display: block;
 
     .about-img {
-      border-radius: 1rem;
+      /* border-radius: 1rem; */
       box-shadow: 4px 4px var(--color-box-shadow);
     }
   }
@@ -60,7 +60,7 @@ import pipboy from '@/assets/pip-boy.jpg'
       place-items: center;
       height: 100%;
       border: 1px solid var(--color-text);
-      border-radius: 1rem;
+      /* border-radius: 1rem; */
       box-shadow: 4px 4px var(--color-box-shadow);
       background-color: var(--color-background);
 
