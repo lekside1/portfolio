@@ -156,6 +156,18 @@ img {
   height: auto;
 }
 
+.on-hover-transition {
+  @media (min-width: 1024px) {
+    transition: transform 0.3s ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
 /* Desktop */
 @media (min-width: 1024px) {
   main,

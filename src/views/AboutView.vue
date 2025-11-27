@@ -62,6 +62,7 @@ import pipboy from '@/assets/pip-boy.jpg'
       border: 1px solid var(--color-text);
       border-radius: 1rem;
       box-shadow: 4px 4px var(--color-box-shadow);
+      background-color: var(--color-background);
 
       /* Desktop */
       @media (min-width: 1024px) {

@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card-item">
+  <div class="card-item on-hover-transition">
     <h2 class="card-item-title bold green">{{ title }}</h2>
 
     <div class="card-item-info">
@@ -61,13 +61,13 @@ defineProps<{
 
   /* Desktop */
   @media (min-width: 1024px) {
-    transition: transform 0.3s ease-in-out;
+    /* transition: transform 0.3s ease-in-out;
 
     @media (hover: hover) {
       &:hover {
         transform: scale(1.05);
       }
-    }
+    } */
   }
 }
 </style>
